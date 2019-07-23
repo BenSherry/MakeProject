@@ -12,6 +12,7 @@ public:
   void setNumberToSearchFor(int n);
 
   std::optional<int> findNearest(const std::vector<int>& values) const;
+  std::optional<int> findLargest(const std::vector<int>& values) const;
 private:
   int number_to_search_for {};
 };

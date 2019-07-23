@@ -22,3 +22,11 @@ std::optional<int> Finder::findNearest(const std::vector<int>& values) const
       return std::abs(x - number_to_search_for) < std::abs(y - number_to_search_for);
     });
 }
+
+std::optional<int> Finder::findLargest(const std::vector<int>& values) const
+{
+    if (values.empty())
+        return std::nullopt;
+    return *find_optimum(values,
+                         [](int x, int y){return x > y;});  
+}

@@ -15,4 +15,7 @@ int main()
   finder.setNumberToSearchFor(number_to_search_for);
   std::cout << "The number nearest to " << finder.getNumberToSearchFor() << " is "
             << *finder.findNearest(numbers) << std::endl;
+
+  std::cout << "The number Largest is:"
+            << *finder.findLargest(numbers) << std::endl;
 }
